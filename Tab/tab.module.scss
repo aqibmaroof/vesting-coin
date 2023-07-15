@@ -1,0 +1,69 @@
+@import '../src/Styles/Variables';
+@import '../src/Styles/Mixins';
+
+.nav-tabs {
+  border: none;
+
+    @media (max-width:575px){
+        border-bottom: 1px solid $Primary-color;
+    }
+
+    .nav-link{
+        color: $White-color;
+        font-weight: 500;
+        border: 1px solid transparent;
+        transition: all ease 0.3s;
+        padding: 25px 25px 17px;
+        @include border-radius(12px);
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+        
+        &:hover{
+            border:1px solid $Primary-color;
+        }
+        &:focus{
+            border:1px solid $Primary-color;
+        }
+
+        &.active{
+            background-color: $Primary-color;
+            color: $White-color;
+            border-color: $Primary-color;
+        }
+
+        @media (max-width:1665px){
+            padding: 20px 20px 12px;
+        }
+        @media (max-width:1365px){
+            padding: 12px 17px 6px;
+        }
+        @media (max-width:1199px){
+            @include border-radius(10px);
+            border-bottom-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+        }
+        @media (max-width:991px){
+            padding: 11px 17px 7px;
+        }
+        @media (max-width:767px){
+            padding: 10px 15px 8px;
+            @include border-radius(7px);
+            border-bottom-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+        }
+        @media (max-width:575px){
+            width: 50%;
+            text-align: center;
+            padding: 9px 12px 6px;
+            @include border-radius(7px);
+            border-bottom-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+        }
+    }
+
+    &.active {
+      background-color: $Primary-color;
+      color: $White-color;
+      border-color: $Primary-color;
+    }
+  }

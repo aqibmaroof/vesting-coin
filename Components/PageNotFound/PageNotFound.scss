@@ -1,0 +1,71 @@
+.pagenotfound {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  @media (max-width: 980px) {
+    padding: 25px 16px;
+  }
+  h1 {
+    width: 100%;
+    text-align: center;
+    color: #fefeff;
+    font-size: 18rem;
+    letter-spacing: 9.76px;
+    font-family: Arial;
+    font-weight: 600;
+    margin-bottom: 0;
+    line-height: 1;
+    @media (max-width: 980px) {
+      font-size: 12rem;
+      letter-spacing: 4.76px;
+    }
+  }
+  h5 {
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    font-size: 44px;
+    letter-spacing: 4px;
+    font-family: Arial;
+    font-weight: 600;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    @media (max-width: 980px) {
+      font-size: 28px;
+      letter-spacing: 1.76px;
+    }
+  }
+  p {
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-size: 24px;
+    @media (max-width: 980px) {
+      font-size: 18px;
+      // letter-spacing:1.76px;
+    }
+  }
+  .btn {
+    background-color: $Primary-color;
+    color: $White-color;
+    border: 1px solid $Primary-color;
+    margin-left: 20px;
+    width: 30%;
+    height: 80%;
+
+    &:hover {
+      background-color: transparent;
+      border-color: $White-color;
+      color: $White-color;
+    }
+
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+  }
+}

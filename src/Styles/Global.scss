@@ -1,0 +1,17 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+// Partial Files
+@import "./Base";
+@import "./Variables";
+@import "./Animations";
+@import "./Mixins";
+@import "./Utilities";
+
+// Components Files
+@import "../../Components/Header/style.module.scss";
+@import "../../Components/HomePage/Homepage.scss";
+@import "../../Components/Card/Card.module.scss";
+@import "../../Components/WalletConnect/MultiWallet.module.scss";
+@import "../../Components/WalletConnect/DisConnect.module.scss";
+@import "../../Components/Tab/tab.module.scss";
+@import "../../Components/PageNotFound/PageNotFound.scss";

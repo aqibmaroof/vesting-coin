@@ -1,0 +1,227 @@
+@import "../../src/Styles/Variables";
+@import "../../src/Styles/Mixins";
+
+.modal {
+  overflow: hidden;
+  padding: 0 !important;
+
+  .modal-dialog {
+    max-width: 669px;
+    height: 100%;
+    margin: 0 auto;
+
+    @media (max-width: 1665px) {
+      max-width: 600px;
+    }
+    @media (max-width: 991px) {
+      max-width: 325px;
+    }
+    @media (max-width: 575px) {
+      max-width: 280px;
+    }
+
+    .modal-content {
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      overflow: hidden;
+      @include border-radius(10px);
+      border: none;
+
+      @media (max-width: 991px) {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .modal-body {
+        padding: 0;
+
+        .modal-body-inner {
+          .box-wrapper {
+            display: inline-block;
+            width: 50%;
+
+            .box {
+              text-align: center;
+              width: 100%;
+              padding: 10px;
+              border-radius: 0;
+              cursor: pointer;
+              margin: 0;
+              display: inline-block;
+              transition: all ease 0.3s;
+
+              .box-inner {
+                @include border-radius(5px);
+                padding: 90.5px 20px;
+                transition: all ease-in 0.4s;
+
+                @media (max-width: 575px) {
+                  padding: 35px 0;
+                }
+
+                @media (max-width: 1665px) {
+                  padding: 50px 0;
+                }
+
+                .box-image {
+                  width: 30%;
+                  height: 30%;
+                  margin: auto;
+                  text-align: center;
+                  .avaxLogo{
+                    width: 90px;
+                    height: 90px;
+                    margin: auto;
+                    @media (max-width: 1665px) {
+                      width: 35px;
+                      height: 35px;
+                    }
+                    @media (max-width: 1366px) {
+                      width: 30px;
+                      height: 30px;
+                    }
+                    @media (max-width: 991px) {
+                      width: 27px;
+                      height: 27px;
+                      margin-right: 10px;
+                    }
+                  }
+
+                  p{
+                    font-size: 30px;
+                    margin: auto;
+                    color: $Black-color;
+                  }
+                  img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                  }
+
+                  @media (max-width: 575px) {
+                    width: 42px;
+                    height: 42px;
+                  }
+                }
+
+                &:hover {
+                  background-color: $Primary-color;
+                }
+
+                .modal-title {
+                  margin: 8px 0;
+                  font-family: Arial, Helvetica, sans-serif;
+                  font-size: 24px;
+                  line-height: 27px;
+                  font-weight: 700;
+                  color: $Black-color;
+
+                  @media (max-width: 1665px) {
+                    font-size: 18px;
+                    line-height: 22px;
+                    margin: 0;
+                  }
+                }
+
+                &:hover .modal-title {
+                  color: $White-color;
+                }
+
+                .box-description {
+                  font-size: 18px;
+                  font-family: Arial, Helvetica, sans-serif;
+                  font-weight: 400;
+                  line-height: 20px;
+                  margin-bottom: 0;
+                  color: $Primary-color;
+
+                  @media (max-width: 1665px) {
+                    font-size: 14px;
+                    line-height: 18px;
+                  }
+                }
+                &:hover .box-description {
+                  color: $White-color;
+                }
+              }
+
+              &:first-of-type {
+                border-right: 1px solid #dfdfdf;
+              }
+              &:last-of-type {
+                border-top: 1px solid #dfdfdf;
+              }
+
+              @media (max-width: 575px) {
+                width: 100%;
+                padding: 7px;
+
+                &:first-of-type {
+                  border-bottom: 1px solid #dfdfdf;
+                }
+              }
+            }
+
+            @media (max-width: 991px) {
+              width: 100%;
+            }
+          }
+
+          @media (max-width: 991px) {
+            & > .box-wrapper:first-child {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.switch-net{
+
+    .modal-dialog {
+      max-width: 350px;
+  
+      @media (max-width: 1665px) {
+        max-width: 300px;
+      }
+      @media (max-width: 991px) {
+        max-width: 250px;
+      }
+      @media (max-width: 575px) {
+        max-width: 225px;
+      }
+  
+      .modal-content {
+        .modal-body {
+          .modal-body-inner {
+            .box-wrapper {
+              width: 100%;
+
+              .modal-custom-heading{
+                  margin: 8px 0;
+                  font-family: Arial, Helvetica, sans-serif;
+                  font-size: 24px;
+                  line-height: 27px;
+                  font-weight: 700;
+                  color: $Black-color;
+                  text-align: center;
+                  padding: 10px;
+
+                  @media (max-width: 1665px) {
+                    font-size: 18px;
+                    line-height: 22px;
+                    margin: 0;
+                  }
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
